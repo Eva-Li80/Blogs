@@ -11,27 +11,21 @@ const Create = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Hämta befintliga blogginlägg från LocalStorage
     const existingPosts = getBlogPosts();
-
-    // Hitta det högsta befintliga ID och öka det med 1
     const maxId = existingPosts.reduce((max, post) => (post.id > max ? post.id : max), 0);
     const newId = maxId + 1;
 
     const newBlog = {
-      id: newId, // Använd det ökade ID:et
+      id: newId, 
       title,
       body,
       author,
     };
 
-    // Lägg till det nya blogginlägget till befintliga inlägg
     existingPosts.push(newBlog);
 
-    // Spara alla blogginlägg (inklusive det nya) i LocalStorage
     saveBlogPosts(existingPosts);
 
-    // Omdirigera användaren till startsidan
     history.push("/");
   };
 
