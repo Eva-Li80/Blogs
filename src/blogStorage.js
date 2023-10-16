@@ -7,6 +7,8 @@ export const saveBlogPosts = (posts) => {
     return storedPosts ? JSON.parse(storedPosts) : [];
   };
 
+  //test
+
 //   const initialBlogPosts = [
 //     {
 //       id: 1,
