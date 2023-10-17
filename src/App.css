@@ -151,4 +151,14 @@
 
 }
 
-/**/
+@media screen and (max-width: 600px) {
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+}
+
