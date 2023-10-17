@@ -24,10 +24,11 @@ const BlogDetails = () => {
   return (
     <div className="details">
       <article>
-        <h2>{blog.title}</h2>
+        <h1>{blog.title}</h1>
         <div>{blog.body}</div>
         <p>Written by: {blog.author}</p>
-        <button onClick={handleDelete}>Delete blog</button>
+        <button className="back"><a href="/">Back to all blogs</a></button>
+        <button className="delete" onClick={handleDelete}>Delete this blog</button>
       </article>
     </div>
   );

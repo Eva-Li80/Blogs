@@ -31,18 +31,19 @@ const Create = () => {
 
   return (
     <div className="create">
-      <h2>Create a new blog</h2>
+      <h1>Create a new blog</h1>
       <form onSubmit={handleSubmit}>
-        <label>Blog title:</label>
+        <label>Title:</label>
         <input
+        placeholder="Write title.."
           type="text"
           required
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label>Blog body:</label>
-        <textarea required onChange={(e) => setBody(e.target.value)} />
-        <label>Blog author:</label>
+        <label>Blog post:</label>
+        <textarea placeholder="Content.." required onChange={(e) => setBody(e.target.value)} />
+        <label>Select author:</label>
         <select value={author} onChange={(e) => setAuthor(e.target.value)}>
           <option value="Mamma">Mamma</option>
           <option value="Pappa">Pappa</option>
