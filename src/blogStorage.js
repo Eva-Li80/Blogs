@@ -7,3 +7,17 @@ export const saveBlogPosts = (posts) => {
     return storedPosts ? JSON.parse(storedPosts) : [];
   };
 
+  test
+
+  const initialBlogPosts = [
+    {
+      id: 1,
+      title: "Welcome to the blog",
+      body: "Try to post something 🥰",
+      author: "Admin",
+    },
+  ];
+  
+  if (!localStorage.getItem('blogPosts')) {
+    saveBlogPosts(initialBlogPosts);
+  }
