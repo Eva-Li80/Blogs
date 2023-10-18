@@ -21,6 +21,8 @@ const BlogDetails = () => {
     history.push("/");
   };
 
+  const isDeleteVisible = blog.id !== 1;
+
   return (
     <div className="details">
       <article>
@@ -28,7 +30,9 @@ const BlogDetails = () => {
         <div>{blog.body}</div>
         <p>Written by: {blog.author}</p>
         <button className="back"><a href="/">Back to all blogs</a></button>
+        {isDeleteVisible && (
         <button className="delete" onClick={handleDelete}>Delete this blog</button>
+        )}
       </article>
     </div>
   );
